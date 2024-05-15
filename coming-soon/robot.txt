@@ -1,0 +1,28 @@
+User-agent: Googlebot
+Disallow:
+
+User-agent: Yahoo! Slurp
+Disallow:
+
+User-agent: bingbot
+Disallow:
+
+User-agent: Baiduspider
+Disallow:
+
+User-agent: DuckDuckBot
+Disallow:
+
+User-agent: Applebot
+Disallow:
+
+User-agent: YandexBot
+Disallow:
+
+User-agent: Sogou
+Disallow:
+
+User-agent: *
+Disallow:
+
+Sitemap: https://kasa.city/sitemap.xml
