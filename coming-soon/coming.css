@@ -6,6 +6,7 @@
 body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
+  font-size: 12px;
   background-color: #ec6164;
   color: white;
   display: flex;
@@ -20,8 +21,7 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  max-width: 800px;
-  padding: 20px;
+  padding: 2rem;
 }
 
 .logo {
@@ -30,12 +30,12 @@ main {
 }
 
 .announcement h1 {
-  font-size: 2.5rem;
-  margin: 20px 0;
+  font-size: 2rem;
+  margin: 3rem 0 2rem 0;
 }
 
 .announcement p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.5;
 }
 
@@ -43,14 +43,15 @@ main {
   margin: 30px 0;
 }
 
-.social-media h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+.social-media h2,
+.apps h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1.8rem;
 }
 
 .social-media a {
   color: white;
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin: 0 10px;
   transition: color 0.3s;
   text-decoration: none;
@@ -60,15 +61,17 @@ main {
   color: #000;
 }
 
+.social-media-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .apps {
   display: flex;
   flex-direction: column;
   margin: 30px 0;
-}
-
-.apps h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
 }
 
 .apps a img {
@@ -89,6 +92,7 @@ main {
 
 footer {
   margin-top: 30px;
+  padding: 0.5rem;
 }
 
 footer p {
@@ -102,4 +106,79 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+}
+
+/* Media Queries pour les écrans plus larges */
+
+@media (min-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+  .logo {
+    width: 200px;
+  }
+
+  .announcement h1 {
+    font-size: 3rem;
+  }
+
+  .announcement p {
+    font-size: 1.4rem;
+  }
+
+  .social-media h2,
+  .apps h2 {
+    font-size: 1.8rem;
+  }
+
+  .social-media a {
+    font-size: 2.5rem;
+  }
+
+  .apps a img {
+    width: 180px;
+  }
+
+  footer p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 900px) {
+  body {
+    font-size: 16px;
+  }
+
+  .announcement h1 {
+    font-size: 3.5rem;
+  }
+
+  .announcement p {
+    font-size: 1.6rem;
+  }
+
+  .social-media h2,
+  .apps h2 {
+    font-size: 2rem;
+  }
+
+  .social-media a {
+    font-size: 3rem;
+  }
+
+  .apps a img {
+    width: 200px;
+  }
+
+  footer p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  body {
+    font-size: 16px;
+    margin: auto;
+    width: 1440px;
+  }
 }
