@@ -1,12 +1,12 @@
 // src/pages/AboutPage.jsx
 
-const AboutPage = () => {
+function AboutPage() {
   return (
     <div>
-      <h2>À propos</h2>
-      <p>C'est la page à propos</p>
+      <h1>À propos</h1>
+     
     </div>
   );
-};
+}
 
 export default AboutPage;

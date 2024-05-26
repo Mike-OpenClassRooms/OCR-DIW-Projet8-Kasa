@@ -1,14 +1,12 @@
 // src/pages/HousingPage.jsx
-import { useParams } from 'react-router-dom';
 
-const HousingPage = () => {
-  const { id } = useParams();
+function HousingPage() {
   return (
     <div>
-      <h2>Page logements</h2>
-      <p>Détails {id}</p>
+      <h1>Logement</h1>
+     
     </div>
   );
-};
+}
 
 export default HousingPage;

@@ -1,12 +1,12 @@
 // src/pages/Error404Page.jsx
 
-const Error404Page = () => {
+function Error404Page() {
   return (
     <div>
-      <h2>404</h2>
-      <p>Oups! La page que vous demandez n'existe pas.</p>
+      <h1>Page non trouvée</h1>
+      <p>La page que vous recherchez n'existe pas.</p>
     </div>
   );
-};
+}
 
 export default Error404Page;

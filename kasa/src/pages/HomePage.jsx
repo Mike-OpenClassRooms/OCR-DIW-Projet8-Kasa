@@ -1,12 +1,12 @@
 // src/pages/HomePage.jsx
 
-const HomePage = () => {
+function HomePage() {
   return (
     <div>
-      <h2>Accueil</h2>
-      <p>Bienvenue !</p>
+      <h1>Accueil</h1>
+      {/* Ajoutez le contenu de la page d'accueil ici */}
     </div>
   );
-};
+}
 
 export default HomePage;
