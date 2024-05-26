@@ -3,7 +3,7 @@
 function AboutPage() {
   return (
     <div>
-      <h1>À propos</h1>
+ {/* Le contenu de la page à propos sera ici */}
      
     </div>
   );

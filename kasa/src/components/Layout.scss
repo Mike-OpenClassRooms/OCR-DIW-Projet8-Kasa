@@ -1,0 +1,82 @@
+// src/components/Layout.scss
+
+// Importation des variables globales
+@import '../styles/scss/main.scss';
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+
+    @media (min-width: 768px) {
+     padding: 45px;
+     max-width: 1240px;
+    }
+
+  .logo {
+ width: 145px;
+
+    @media (min-width: 768px) {
+      height: 68px;
+    }
+  }
+
+  nav {
+    ul {
+      display: flex;
+      gap: 26px;
+
+      @media (min-width: 768px) {
+        gap: 57px;
+      }
+
+      li {
+        list-style: none;
+      }
+
+      a {
+        color: #000;
+        text-align: right;
+        font-weight: 500;
+        text-decoration-line: none;
+        text-transform: uppercase; 
+
+        &.active {
+          text-decoration: underline; 
+        }
+
+        @media (min-width: 768px) {
+          text-transform: none;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4em;
+  background-color: $background-footer;
+  color: $font-color-footer;
+ padding: 5.5em 10em 5em 10em;
+
+  @media (min-width: 768px) {
+   padding: 3.67em 0 1.6em;
+  }
+
+  .logo-footer {
+    width: 122px;
+  }
+
+  p {
+text-align: center;
+    
+    @media (min-width: 768px) {
+      font-size: 1.33rem;
+    }
+  }
+}
