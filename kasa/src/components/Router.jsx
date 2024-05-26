@@ -1,5 +1,5 @@
-// Importation des composants Router, Route et Switch de react-router-dom
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'; 
+// Importation des composants Router, Route et Routes de react-router-dom
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; 
 
 // Importation des différentes pages de l'application
 import HomePage from '../pages/HomePage'; // Page d'accueil
@@ -15,17 +15,17 @@ function AppRouter() {
     <Router>
       {/* Le composant Layout est utilisé pour encapsuler la structure globale de la page */}
       <Layout>
-        {/* Le composant Switch rend uniquement le premier <Route> qui correspond à l'URL actuelle */}
-        <Switch>
+        {/* Le composant Routes rend les <Route> qui correspondent à l'URL actuelle */}
+        <Routes>
           {/* Route exacte pour la page d'accueil */}
-          <Route exact path="/" component={HomePage} />
+          <Route exact path="/" element={<HomePage />} />
           {/* Route pour la page "À propos" */}
-          <Route path="/about" component={AboutPage} />
+          <Route path="/about" element={<AboutPage />} />
           {/* Route pour une page de logement spécifique, identifiée par un paramètre ID */}
-          <Route path="/property/:id" component={HousingPage} />
+          <Route path="/housing/:id" element={<HousingPage />} />
           {/* Route par défaut pour les URL non correspondantes, affichant une page d'erreur 404 */}
-          <Route component={Error404Page} />
-        </Switch>
+          <Route path="*" element={<Error404Page />} />
+        </Routes>
       </Layout>
     </Router>
   );
