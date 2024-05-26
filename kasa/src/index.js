@@ -1,7 +1,7 @@
 // src/index.jsx
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./styles/css/index.css";
+import "./styles/scss/main.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
