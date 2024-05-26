@@ -2,33 +2,41 @@
 <html lang="fr">
 
 <head>
-  <!-- Métadonnées essentielles -->
+  <!-- Encodage des caractères -->
   <meta charset="utf-8" />
+  <!-- Adaptation de la page à la taille de l'écran -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Couleur du thème pour les navigateurs mobiles -->
   <meta name="theme-color" content="#EC6164" />
+  <!-- Description de la page pour les moteurs de recherche et les réseaux sociaux -->
   <meta name="description"
     content="Trouvez un Kasa pour chaque type de voyage&nbsp;→ 7&nbsp;millions de locations de vacances&nbsp;→ 2&nbsp;millions de Coups de cœur voyageurs&nbsp;→ Plus de 220&nbsp;pays et zones géographiques" />
+  <!-- Auteur de la page -->
   <meta name="author" content="Mikaël Posty" />
+  <!-- Indication pour les moteurs de recherche d'indexer et de suivre les liens de la page -->
   <meta name="robots" content="index, follow" />
 
   <!-- Titre de la page -->
   <title>Kasa • Location d’appartements entre particuliers</title>
 
-  <!-- Lien canonique -->
+  <!-- URL canonique de la page -->
   <link rel="canonical" href="https://kasa.city/" />
 
-  <!-- Favicon -->
+  <!-- Favicon pour les onglets de navigateur -->
   <link rel="icon" href="%PUBLIC_URL%/favicon.ico" sizes="64x64 32x32 24x24 16x16" />
-  <!-- Apple Touch Icon -->
+  <!-- Icône pour les appareils Apple -->
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/assets/images/favicons/apple-touch-icon.png" />
 
-  <!-- Manifest pour PWA -->
+  <!-- Manifest pour Progressive Web App (PWA) -->
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-  <!-- Font Awesome -->
+  <!-- Intégration de Font Awesome pour les icônes -->
   <script src="https://kit.fontawesome.com/3c74274841.js" crossorigin="anonymous"></script>
 
-  <!-- Google Fonts -->
+  <!-- Intégration de Simple Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons@v8.6.0/css/simple-icons.min.css">
+
+  <!-- Préchargement et intégration des polices Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -53,21 +61,23 @@
     content="Trouvez un Kasa pour chaque type de voyage&nbsp;→ 7&nbsp;millions de locations de vacances&nbsp;→ 2&nbsp;millions de Coups de cœur voyageurs&nbsp;→ Plus de 220&nbsp;pays et zones géographiques">
   <meta name="twitter:image" content="%PUBLIC_URL%/assets/images/logo-kasa-og.png">
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Google Tag Manager -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EJTQXNR29Q"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-EJTQXNR29Q');
   </script>
 </head>
 
 <body>
-  <!-- Racine de l'application React -->
+  <!-- Message pour les utilisateurs sans JavaScript -->
   <noscript>Vous devez activer JavaScript pour utiliser cette application.</noscript>
+
+  <!-- Racine de l'application React -->
   <div id="root"></div>
+
 </body>
 
 </html>
