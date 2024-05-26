@@ -5,7 +5,6 @@ import AboutPage from './pages/AboutPage';
 import HousingPage from './pages/HousingPage';
 import Error404Page from './pages/Error404Page';
 import Layout from './components/Layout';
-import './App.css';
 
 function App() {
   return (
