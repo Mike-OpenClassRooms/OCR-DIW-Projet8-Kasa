@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 import './Layout.scss';
 
 // Importation du logo
-import logo from '../assets/images/logo-kasa.svg';
-import logoFooter from '../assets/images/logo-kasa-white.svg';
+import logo from '../../assets/images/logo-kasa.svg';
+import logoFooter from '../../assets/images/logo-kasa-white.svg';
 
 // Définition du composant fonctionnel Layout qui accepte des props, ici notamment 'children'
 function Layout({ children }) {
