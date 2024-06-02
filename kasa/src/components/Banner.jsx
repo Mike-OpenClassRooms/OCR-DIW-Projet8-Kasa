@@ -1,0 +1,1 @@
+// Ce composant gère la bannière affichée sur la page d'accueil et la page À Propos.
