@@ -1,11 +1,15 @@
 // src/pages/HomePage.jsx
+import Layout from '../components/Layout/Layout';
+import Banner from '../components/Banner/Banner';
+import HousingCard from '../components/HousingCard/HousingCard';
 
-function HomePage() {
+const HomePage = () => {
   return (
-    <div>
-      {/* Le contenu de la page d'accueil sera ici */}
-    </div>
+      <main>
+        <Banner />
+        <HousingCard />
+      </main>
   );
-}
+};
 
 export default HomePage;

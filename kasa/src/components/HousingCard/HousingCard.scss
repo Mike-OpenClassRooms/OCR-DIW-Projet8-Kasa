@@ -1,0 +1,32 @@
+// src/components/HousingCard/HousingCard.scss
+.housing-display {
+  background-color: #f6f6f6;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.housing-home {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.housing-img-home {
+  width: 100%;
+  height: auto;
+}
+
+.housing-title-home {
+  padding: 10px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+@media (min-width: 768px) {
+  .housing-display {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
