@@ -8,8 +8,7 @@ import './Banner.scss';
 const Banner = ({ title, imageUrl }) => {
   return (
     // Div principale de la bannière avec une image de fond définie par la prop imageUrl
-    <div className="banner" style={{ backgroundImage: `url(${imageUrl})` }}>
-      {/* Si la prop title est fournie, affiche un élément h1 avec la classe CSS banner-title */}
+       <div className="banner" style={{ backgroundImage: `url(${imageUrl})` }}>
       {title && <h1 className="banner-title">{title}</h1>}
     </div>
   );
