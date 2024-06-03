@@ -6,10 +6,10 @@ const homeBannerImg = './images/banner-kasa-home.webp';
 
 const HomePage = () => {
   return (
-<>
+    <>
       <Banner imageUrl={homeBannerImg} title="Chez vous, partout et ailleurs" />
       <HousingCard />
-  </>
+    </>
   );
 };
 
