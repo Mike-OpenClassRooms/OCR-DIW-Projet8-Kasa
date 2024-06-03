@@ -29,9 +29,17 @@ function Layout({ children }) {
             {/* Liste des éléments de navigation */}
             <ul>
               {/* Élément de navigation vers la page d'accueil */}
-              <li><Link to="/" onClick={() => handleNavClick('Accueil')}>Accueil</Link></li>
+              <li>
+                <Link to="/" onClick={() => handleNavClick('Accueil')}>
+                  Accueil
+                </Link>
+              </li>
               {/* Élément de navigation vers la page 'À propos' */}
-              <li><Link to="/about" onClick={() => handleNavClick('À propos')}>À propos</Link></li>
+              <li>
+                <Link to="/about" onClick={() => handleNavClick('À propos')}>
+                  À propos
+                </Link>
+              </li>
             </ul>
           </nav>
         </div>

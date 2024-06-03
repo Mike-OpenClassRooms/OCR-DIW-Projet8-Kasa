@@ -9,13 +9,13 @@
   align-items: center;
   padding: 20px;
 
-    @media (min-width: 768px) {
-     padding: 45px;
-     max-width: 1240px;
-    }
+  @media (min-width: 768px) {
+    padding: 45px;
+    max-width: 1240px;
+  }
 
   .logo {
- width: 145px;
+    width: 145px;
 
     @media (min-width: 768px) {
       height: 68px;
@@ -40,10 +40,10 @@
         text-align: right;
         font-weight: 500;
         text-decoration-line: none;
-        text-transform: uppercase; 
+        text-transform: uppercase;
 
         &.active {
-          text-decoration: underline; 
+          text-decoration: underline;
         }
 
         @media (min-width: 768px) {
@@ -62,10 +62,10 @@ footer {
   gap: 2.4em;
   background-color: $background-footer;
   color: $font-color-footer;
- padding: 5.5em 10em 5em 10em;
+  padding: 5.5em 10em 5em 10em;
 
   @media (min-width: 768px) {
-   padding: 3.67em 0 1.6em;
+    padding: 3.67em 0 1.6em;
   }
 
   .logo-footer {
@@ -73,8 +73,8 @@ footer {
   }
 
   p {
-text-align: center;
-    
+    text-align: center;
+
     @media (min-width: 768px) {
       font-size: 1.33rem;
     }

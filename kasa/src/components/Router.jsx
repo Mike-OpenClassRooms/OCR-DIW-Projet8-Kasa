@@ -1,5 +1,5 @@
 // Importation des composants Router, Route et Routes de react-router-dom
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; 
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 // Importation des différentes pages de l'application
 import HomePage from '../pages/HomePage'; // Page d'accueil
