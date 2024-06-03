@@ -1,4 +1,4 @@
-// Ce composant gère la bannière affichée sur la page d'accueil et la page À Propos.
+// Ce composant gère la bannière affichée sur la page d’accueil et la page À Propos.
 
 // Importation du fichier de styles SCSS pour styliser le composant Banner
 import './Banner.scss';
