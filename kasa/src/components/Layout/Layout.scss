@@ -54,6 +54,14 @@
   }
 }
 
+main {
+  padding: 27px 20px;
+
+  @media (min-width: 1024px) {
+    padding: 50px 100px;
+  }
+}
+
 footer {
   display: flex;
   flex-direction: column;
