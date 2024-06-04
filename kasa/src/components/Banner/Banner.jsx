@@ -9,6 +9,9 @@ const Banner = ({ title, imageUrl }) => {
   return (
     // Div principale de la bannière avec une image de fond définie par la prop imageUrl
     <div className="banner" style={{ backgroundImage: `url(${imageUrl})` }}>
+      {/* Calque semi-transparent */}
+      <div className="overlay"></div>
+      {/* Texte de la bannière */}
       {title && <h1 className="banner-title">{title}</h1>}
     </div>
   );
