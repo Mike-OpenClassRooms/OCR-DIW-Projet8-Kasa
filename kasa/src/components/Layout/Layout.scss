@@ -3,16 +3,19 @@
 // Importation des variables globales
 @import '../../styles/scss/main.scss';
 
+header {
+  width: 100%;
+  padding: 20px 20px 0 20px;
+
+  @media (min-width: 768px) {
+    padding: 45px 100px 0 100px;
+  }
+}
+
 .header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-
-  @media (min-width: 768px) {
-    padding: 45px;
-    max-width: 1240px;
-  }
 
   .logo {
     width: 145px;
