@@ -4,14 +4,49 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
+  justify-items: center;
   padding-top: 22px;
 
-  @media screen and (min-width: 768px) {
-    grid-template-columns: repeat(3, 1fr);
+  @media only screen and (min-width: 480px) and (max-width: 600px) {
     background-color: #f6f6f6;
+    border-radius: 15px;
+    padding: 15px;
+    margin-top: 20px;
+  }
+
+  @media only screen and (min-width: 601px) {
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #f6f6f6;
+    border-radius: 20px;
+    padding: 15px;
+    margin-top: 25px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 25px;
+    margin-top: 24px;
+  }
+
+  @media screen and (min-width: 992px) {
+    gap: 32px;
+    padding: 32px;
+    margin-top: 30px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media screen and (min-width: 1280px) {
+    gap: 44px;
+    padding: 44px;
+    margin-top: 38px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    gap: 50px 60px;
     padding: 50px;
     margin-top: 43px;
-    border-radius: 25px;
   }
 }
 
@@ -23,10 +58,20 @@
   height: 255px;
   position: relative;
 
+  @media screen and (min-width: 480px) {
+    width: 100%;
+  }
+
+  @media only screen and (min-width: 601px) {
+    height: 300px;
+  }
+
   @media screen and (min-width: 768px) {
+    height: 330px;
+  }
+
+  @media screen and (min-width: 1440px) {
     height: 340px;
-    width: 340px;
-    margin-bottom: 50px;
   }
 }
 
@@ -44,6 +89,7 @@
   font-size: 1.5em;
   font-weight: 700;
   color: white;
+  text-shadow: 0.7px 0.7px 0.7px #000;
 
   @media screen and (min-width: 768px) {
     font-size: 1em;
