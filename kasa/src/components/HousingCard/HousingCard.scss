@@ -1,6 +1,7 @@
 // src/components/HousingCard/HousingCard.scss
 
 .housing-display {
+  // Affiche les éléments en grille avec une seule colonne par défaut, espace les éléments et centre leur alignement horizontal.
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
@@ -8,6 +9,7 @@
   padding-top: 22px;
 
   @media only screen and (min-width: 480px) and (max-width: 600px) {
+    // Applique des styles spécifiques pour les écrans entre 480px et 600px de largeur.
     background-color: #f6f6f6;
     border-radius: 15px;
     padding: 15px;
@@ -15,6 +17,7 @@
   }
 
   @media only screen and (min-width: 601px) {
+    // Change la grille pour avoir deux colonnes à partir de 601px de largeur d'écran.
     grid-template-columns: repeat(2, 1fr);
     background-color: #f6f6f6;
     border-radius: 20px;
@@ -23,27 +26,32 @@
   }
 
   @media screen and (min-width: 768px) {
+    // Ajuste le remplissage et la marge supérieure pour les écrans de 768px et plus.
     padding: 25px;
     margin-top: 24px;
   }
 
   @media screen and (min-width: 992px) {
+    // Augmente l'espacement entre les éléments, le remplissage et la marge supérieure pour les écrans de 992px et plus.
     gap: 32px;
     padding: 32px;
     margin-top: 30px;
   }
 
   @media screen and (min-width: 1024px) {
+    // Change la grille pour avoir trois colonnes à partir de 1024px de largeur d'écran.
     grid-template-columns: repeat(3, 1fr);
   }
 
   @media screen and (min-width: 1280px) {
+    // Ajuste l'espacement, le remplissage et la marge supérieure pour les écrans de 1280px et plus.
     gap: 44px;
     padding: 44px;
     margin-top: 38px;
   }
 
   @media screen and (min-width: 1440px) {
+    // Ajuste l'espacement (différent vertical et horizontal), le remplissage et la marge supérieure pour les écrans de 1440px et plus.
     gap: 50px 60px;
     padding: 50px;
     margin-top: 43px;
@@ -51,6 +59,7 @@
 }
 
 .housing-home {
+  // Styles de base pour la carte logement, avec un fond blanc, coins arrondis, et une ombre.
   background: white;
   border-radius: 10px;
   overflow: hidden;
@@ -59,29 +68,35 @@
   position: relative;
 
   @media screen and (min-width: 480px) {
+    // Assure que la carte prend toute la largeur disponible à partir de 480px de largeur d'écran.
     width: 100%;
   }
 
   @media only screen and (min-width: 601px) {
+    // Augmente la hauteur de la carte pour les écrans de 601px et plus.
     height: 300px;
   }
 
   @media screen and (min-width: 768px) {
+    // Augmente la hauteur de la carte pour les écrans de 768px et plus.
     height: 330px;
   }
 
   @media screen and (min-width: 1440px) {
+    // Augmente la hauteur de la carte pour les écrans de 1440px et plus.
     height: 340px;
   }
 }
 
 .housing-img-home {
+  // Assure que l'image occupe toute la largeur et la hauteur de son conteneur et est redimensionnée pour couvrir complètement.
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
 .housing-title-home {
+  // Positionne le titre en bas à gauche, une taille de police et une ombre pour le texte.
   position: absolute;
   bottom: 0;
   left: 0;
@@ -92,6 +107,7 @@
   text-shadow: 0.7px 0.7px 0.7px #000;
 
   @media screen and (min-width: 768px) {
+    // Ajuste la taille de la police pour les écrans de 768px et plus.
     font-size: 1em;
   }
 }
