@@ -6,8 +6,8 @@
   position: relative;
   padding-top: 33%;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  border-radius: 10px; // Default for mobile
-  overflow: hidden; // Assure que l'image et l'overlay respectent les bordures
+  border-radius: 10px;
+  overflow: hidden;
 
   // Calque semi-transparent
   .overlay {
@@ -16,9 +16,9 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); // Couleur noire avec 60% d'opacité
+    background-color: rgba(0, 0, 0, 0.6);
     z-index: 1;
-    border-radius: inherit; // Assure que le calque suit les mêmes bordures que le conteneur
+    border-radius: inherit;
   }
 
   .banner-title {
@@ -31,7 +31,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    z-index: 2; // Assurez-vous que le texte est au-dessus de l'overlay
+    z-index: 2;
 
     // Styles pour mobile
     font-size: 24px;
@@ -40,6 +40,8 @@
     @media only screen and (min-width: 768px) {
       // Styles pour desktop
       font-size: 48px;
+      top: 50%;
+      left: 50%;
       line-height: 142.6%;
       text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       -webkit-text-stroke-width: 1px;
