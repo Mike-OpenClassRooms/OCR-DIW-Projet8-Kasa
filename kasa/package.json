@@ -16,6 +16,7 @@
     "react-router-dom": "^6.23.1",
     "react-scripts": "^5.0.1",
     "sass": "^1.77.2",
+    "simple-icons": "^12.1.0",
     "tough-cookie": "^4.1.4",
     "web-vitals": "^4.0.1"
   },
