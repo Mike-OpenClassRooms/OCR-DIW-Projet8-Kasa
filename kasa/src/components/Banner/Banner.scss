@@ -22,7 +22,7 @@
 
   .banner-title {
     color: #fff;
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
     font-style: normal;
     font-weight: 700;
     position: absolute;
@@ -37,45 +37,39 @@
     line-height: 100%; // 24px
 
     @media only screen and (min-width: 360px) {
-      padding-right: 70px;
+      max-width: 230px;
     }
 
-    @media only screen and (min-width: 375px) {
-      padding-right: 94px;
-    }
-
-    @media only screen and (min-width: 390px) {
-      padding-right: 99px;
-    }
-
-    @media only screen and (min-width: 428px) {
-      padding-right: 94px;
-    }
-
-    /* ********** S · 428 - 600 dp ********** */
-    @media only screen and (min-width: 480px) and (max-width: 600px) {
-      padding-right: 94px;
-    }
-
-    /* ********** M · 601 - 768 dp ********** */
-    @media only screen and (min-width: 601px) and (max-width: 768px) {
-      padding-right: 94px;
-    }
-
-    @media only screen and (min-width: 768px) {
-      // Styles pour desktop
-      font-size: 48px;
+    @media only screen and (min-width: 601px) {
+      font-size: 32px;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
       line-height: 142.6%;
       text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      width: calc(
+        100% - 32px
+      ); // Ajuste la largeur à partir de 601px pour laisser un espace de 16px de chaque côté
+      max-width: none; // Supprime la limite de largeur
+      white-space: nowrap; // Empêche le texte de passer à la ligne
+      overflow: hidden; // Assure que le texte n'outrepasse pas le conteneur
+      text-overflow: ellipsis; // Ajoute des points de suspension si le texte est trop long
+    }
+
+    @media only screen and (min-width: 992px) {
+      // Styles pour desktop
+      font-size: 40px;
+    }
+
+    @media only screen and (min-width: 1280px) {
+      // Styles pour desktop
+      font-size: 48px;
     }
   }
 
   // Media queries pour adapter le padding-top et le border-radius
-  @media only screen and (min-width: 480px) and (max-width: 600px) {
+  @media only screen and (min-width: 480px) {
     padding-top: 28%;
   }
 
