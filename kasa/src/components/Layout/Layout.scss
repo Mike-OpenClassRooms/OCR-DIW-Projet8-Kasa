@@ -8,7 +8,11 @@ header {
   width: 100%;
   padding: 20px 20px 0 20px;
 
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
+    padding: 32px 50px 0 50px;
+  }
+
+  @media (min-width: 1024px) {
     padding: 45px 100px 0 100px;
   }
 }
@@ -60,6 +64,10 @@ header {
 
 main {
   padding: 27px 20px;
+
+  @media only screen and (min-width: 992px) {
+    padding: 38px 50px;
+  }
 
   @media (min-width: 1024px) {
     padding: 50px 100px;
