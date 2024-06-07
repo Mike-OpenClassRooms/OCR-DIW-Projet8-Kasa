@@ -1,7 +1,15 @@
 // src/pages/AboutPage.jsx
 
-function AboutPage() {
-  return <div>{/* Le contenu de la page à propos sera ici */}</div>;
-}
+import Banner from '../components/Banner/Banner';
+
+const homeBannerImg = './images/banner-kasa-about.webp';
+
+const AboutPage = () => {
+  return (
+    <>
+      <Banner imageUrl={homeBannerImg} />
+    </>
+  );
+};
 
 export default AboutPage;
