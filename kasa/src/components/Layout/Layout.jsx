@@ -37,7 +37,7 @@ function Layout({ children }) {
               {/* Élément de navigation vers la page 'À propos' */}
               <li>
                 <Link to="/about" onClick={() => handleNavClick('À Propos')}>
-                  À propos
+                  À Propos
                 </Link>
               </li>
             </ul>
