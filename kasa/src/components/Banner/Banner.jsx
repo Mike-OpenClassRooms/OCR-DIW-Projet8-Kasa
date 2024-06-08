@@ -5,7 +5,7 @@ import './Banner.scss';
 
 // Déclaration d'un composant fonctionnel nommé Banner
 // Ce composant prend trois props : title, imageUrl, et overlayOpacity
-const Banner = ({ title, imageUrl, overlayOpacity }) => {
+const Banner = ({ title, imageUrl, overlayOpacity = 0.6 }) => {
   return (
     // Div principale de la bannière avec une image de fond définie par la prop imageUrl
     <div className="banner" style={{ backgroundImage: `url(${imageUrl})` }}>
@@ -18,11 +18,6 @@ const Banner = ({ title, imageUrl, overlayOpacity }) => {
       {title && <h1 className="banner-title">{title}</h1>}
     </div>
   );
-};
-
-// Valeurs par défaut pour les props
-Banner.defaultProps = {
-  overlayOpacity: 0.6, // Valeur par défaut de l'opacité de l'overlay
 };
 
 // Exportation du composant Banner pour pouvoir l'utiliser dans d'autres parties de l'application
