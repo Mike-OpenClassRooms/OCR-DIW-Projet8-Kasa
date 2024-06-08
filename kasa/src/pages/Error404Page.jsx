@@ -1,11 +1,13 @@
 // src/pages/Error404Page.jsx
 
+import { Link } from 'react-router-dom';
+
 function Error404Page() {
   return (
-    <div>
-      <h1>Page non trouvée</h1>
-      <p>404</p>
-      <p>La page que vous recherchez n'existe pas.</p>
+    <div className="error404">
+      <h1>404</h1>
+      <p>Oups! La page que vous demandez n'existe pas.</p>
+      <Link to="/">Retourner sur la page d’accueil</Link>
     </div>
   );
 }
