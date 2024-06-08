@@ -1,16 +1,21 @@
 // src/pages/AboutPage.jsx
+// Ce composant gère la page À Propos de l'application Kasa.
 
-import React from 'react';
-import Banner from '../components/Banner/Banner';
-import Collapse from '../components/Collapse/Collapse';
+import Banner from '../components/Banner/Banner'; // Importation du composant Banner
+import Collapse from '../components/Collapse/Collapse'; // Importation du composant Collapse
 
-const aboutBannerImg = './images/banner-kasa-about.webp';
+const aboutBannerImg = './images/banner-kasa-about.webp'; // Définition du chemin de l'image pour la bannière
 
+// Définition du composant AboutPage
 const AboutPage = () => {
   return (
     <>
+      {/* Utilisation du composant Banner avec les props imageUrl et overlayOpacity */}
       <Banner imageUrl={aboutBannerImg} overlayOpacity={0.3} />
+
+      {/* Section contenant les différentes valeurs de la page À Propos avec des menus déroulants */}
       <div className="about-benefits">
+        {/* Utilisation du composant Collapse pour chaque valeur */}
         <Collapse title="Fiabilité">
           <p>
             Les annonces postées sur Kasa garantissent une fiabilité totale. Les
@@ -50,4 +55,4 @@ const AboutPage = () => {
   );
 };
 
-export default AboutPage;
+export default AboutPage; // Exportation du composant pour utilisation dans d'autres parties de l'application

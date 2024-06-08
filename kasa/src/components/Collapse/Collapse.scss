@@ -1,71 +1,79 @@
+// Style pour l'en-tête du menu déroulant
 .opened-collapse {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #ff6060;
-  color: white;
-  border-radius: 5px;
-  padding: 10px;
-  width: 100%;
-  cursor: pointer;
+  display: flex; // Utilisation du flexbox pour aligner les éléments enfants
+  justify-content: space-between; // Espacement égal entre les éléments
+  align-items: center; // Alignement des éléments au centre verticalement
+  background: #ff6060; // Couleur de fond
+  color: white; // Couleur du texte
+  border-radius: 5px; // Bordures arrondies
+  padding: 10px; // Espacement interne
+  width: 100%; // Largeur complète du conteneur parent
+  cursor: pointer; // Curseur en forme de pointeur pour indiquer que c'est cliquable
 
   @media only screen and (min-width: 1024px) {
-    padding: 10px 20px;
+    padding: 10px 20px; // Augmentation du padding sur les écrans larges
   }
 }
 
+// Style pour le titre dans l'en-tête
 .opened-collapse h2 {
-  font-size: 13px;
+  font-size: 13px; // Taille de police par défaut
 
   @media only screen and (min-width: 1024px) {
-    font-size: 24px;
+    font-size: 24px; // Augmentation de la taille de la police sur les écrans larges
   }
 }
 
+// Style pour l'icône de chevron
 .opened-collapse i {
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out; // Transition douce pour la rotation
 }
 
+// Classe appliquée lorsque le chevron est tourné
 .rotate-chevron {
-  transform: rotate(180deg);
+  transform: rotate(180deg); // Rotation de 180 degrés
 }
 
+// Style pour le conteneur principal lorsque le menu est ouvert
 .full-collapse {
-  background: #f6f6f673;
-  border-radius: 5px;
-  width: 100%;
+  background: #f6f6f673; // Couleur de fond avec opacité
+  border-radius: 5px; // Bordures arrondies
+  width: 100%; // Largeur complète du conteneur parent
 }
 
+// Style pour le contenu du menu déroulant
 .collapse-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  opacity: 0;
-  padding: 0 20px;
-  font-size: 12px;
-  font-weight: 400;
+  max-height: 0; // Hauteur maximale à 0 (invisible par défaut)
+  overflow: hidden; // Contenu masqué lorsqu'il dépasse la hauteur maximale
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out; // Transition douce pour l'ouverture/fermeture
+  opacity: 0; // Opacité à 0 (invisible par défaut)
+  padding: 0 20px; // Espacement interne latéral
+  font-size: 12px; // Taille de police par défaut
+  font-weight: 400; // Épaisseur de police
 
   @media only screen and (min-width: 1024px) {
-    font-size: 18px;
+    font-size: 18px; // Augmentation de la taille de la police sur les écrans larges
   }
 }
 
+// Classe appliquée lorsque le contenu est visible
 .show-content {
-  max-height: 500px; /* Ajustez cette valeur selon la quantité de contenu */
-  opacity: 1;
-  padding: 20px;
+  max-height: 600px; // Hauteur maximale lorsque le contenu est visible
+  opacity: 1; // Opacité à 1 (visible)
+  padding: 20px; // Espacement interne autour du contenu
 }
 
+// Style pour la section des avantages dans la page About
 .about-benefits {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding-top: 20px;
-  margin: auto;
+  display: flex; // Utilisation du flexbox
+  flex-direction: column; // Orientation des éléments en colonne
+  gap: 20px; // Espacement entre les éléments
+  padding-top: 20px; // Espacement interne en haut
+  margin: auto; // Marges automatiques pour centrage
 
   @media only screen and (min-width: 1024px) {
-    width: 82.5%;
-    padding-top: 38px;
-    gap: 30px;
+    width: 82.5%; // Largeur de 82.5% sur les écrans larges
+    padding-top: 38px; // Augmentation du padding en haut sur les écrans larges
+    gap: 30px; // Augmentation de l'espacement entre les éléments sur les écrans larges
   }
 }
