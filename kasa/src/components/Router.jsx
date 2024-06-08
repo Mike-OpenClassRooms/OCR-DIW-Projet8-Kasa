@@ -1,3 +1,5 @@
+// src/components/Router.jsx
+
 // Importation des composants BrowserRouter, Route et Routes de react-router-dom
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
