@@ -1,26 +1,3 @@
-.closed-collapse {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #ff6060;
-  color: white;
-  border-radius: 5px;
-  padding: 10px;
-  width: 100%;
-
-  @media only screen and (min-width: 1024px) {
-    padding: 10px 20px;
-  }
-}
-
-.closed-collapse h2 {
-  font-size: 13px;
-
-  @media only screen and (min-width: 1024px) {
-    font-size: 24px;
-  }
-}
-
 .opened-collapse {
   display: flex;
   justify-content: space-between;
@@ -30,6 +7,7 @@
   border-radius: 5px;
   padding: 10px;
   width: 100%;
+  cursor: pointer;
 
   @media only screen and (min-width: 1024px) {
     padding: 10px 20px;
@@ -44,23 +22,38 @@
   }
 }
 
+.opened-collapse i {
+  transition: transform 0.3s ease-in-out;
+}
+
+.rotate-chevron {
+  transform: rotate(180deg);
+}
+
 .full-collapse {
   background: #f6f6f673;
   border-radius: 5px;
   width: 100%;
-
-  @media only screen and (min-width: 1024px) {
-  }
 }
 
 .collapse-content {
-  padding: 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0;
+  padding: 0 20px;
   font-size: 12px;
   font-weight: 400;
 
   @media only screen and (min-width: 1024px) {
     font-size: 18px;
   }
+}
+
+.show-content {
+  max-height: 500px; /* Ajustez cette valeur selon la quantité de contenu */
+  opacity: 1;
+  padding: 20px;
 }
 
 .about-benefits {
