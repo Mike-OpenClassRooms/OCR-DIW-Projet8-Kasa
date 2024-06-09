@@ -30,12 +30,19 @@ function HousingPage() {
 
   // Afficher les informations du logement
   return (
-    <div>
+    <div className="housing-sheet">
       <Slideshow images={logement.pictures} alt={logement.title} />
-      <h1>{logement.title}</h1>
-      <p>{logement.location}</p>
-      <p>{logement.description}</p>
-      <div>
+
+      <div className="housing-info">
+        <div className="housing-details">
+          <h1>{logement.title}</h1>
+          <p>{logement.location}</p>
+        </div>
+
+        <div className="host-ratings"></div>
+      </div>
+
+      <div className="housing-collapses">
         <Collapse title="Description">
           <p>{logement.description}</p>
         </Collapse>
