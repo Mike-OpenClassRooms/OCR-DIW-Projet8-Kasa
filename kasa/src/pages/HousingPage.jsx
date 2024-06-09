@@ -5,6 +5,9 @@ import { useEffect } from 'react';
 import logements from '../data/logements.json';
 import Slideshow from '../components/Slideshow/Slideshow';
 import Collapse from '../components/Collapse/Collapse';
+import Tags from '../components/Tags/Tags';
+import Host from '../components/Host/Host';
+import Rating from '../components/Rating/Rating';
 
 function HousingPage() {
   // Récupérer l'ID du logement depuis les paramètres d'URL
@@ -37,9 +40,14 @@ function HousingPage() {
         <div className="housing-details">
           <h1>{logement.title}</h1>
           <p>{logement.location}</p>
+          <Tags tags={logement.tags} />
         </div>
 
-        <div className="host-ratings"></div>
+        <div className="host-ratings">
+          <Host host={logement.host} />
+
+          <Rating rating={parseInt(logement.rating)} />
+        </div>
       </div>
 
       <div className="housing-collapses">
