@@ -1,0 +1,14 @@
+// src/components/Rating/Rating.scss
+
+.rating {
+  display: flex;
+  gap: 5px;
+}
+
+.full-star {
+  color: #ff6060;
+}
+
+.empty-star {
+  color: #e0e0e0;
+}
