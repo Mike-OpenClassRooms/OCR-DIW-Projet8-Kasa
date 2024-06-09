@@ -5,8 +5,8 @@ import './Rating.scss';
 
 const Rating = ({ rating }) => {
   const maxRating = 5;
-  const fullStar = <i className="fa-solid fa-star fa-2xl full-star"></i>;
-  const emptyStar = <i className="fa-solid fa-star fa-2xl empty-star"></i>;
+  const fullStar = <i className="fa-solid fa-star full-star"></i>;
+  const emptyStar = <i className="fa-solid fa-star empty-star"></i>;
 
   return (
     <div className="rating">

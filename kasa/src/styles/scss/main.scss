@@ -79,6 +79,19 @@ a {
 
 // Style général de la page logement
 
+.housing-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 15px 0;
+  @media only screen and (min-width: 1024px) {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 24px 0;
+  }
+}
+
 .housing-details {
   display: flex;
   flex-direction: column;
@@ -93,5 +106,38 @@ a {
   p {
     font-size: 14px;
     font-weight: 500;
+  }
+}
+
+.host-ratings {
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+  align-items: center;
+
+  @media only screen and (min-width: 1024px) {
+    flex-direction: column-reverse;
+    gap: 21px;
+    justify-content: center;
+  }
+}
+
+.housing-collapses {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  li {
+    list-style: none;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 76px;
+
+    & > div {
+      flex: 1;
+    }
   }
 }

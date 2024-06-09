@@ -44,9 +44,8 @@ function HousingPage() {
         </div>
 
         <div className="host-ratings">
-          <Host host={logement.host} />
-
           <Rating rating={parseInt(logement.rating)} />
+          <Host host={logement.host} />
         </div>
       </div>
 
