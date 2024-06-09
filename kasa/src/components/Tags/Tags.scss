@@ -4,12 +4,27 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  justify-content: flex-start;
 }
 
 .tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #ff6060;
   color: white;
-  padding: 5px 10px;
+  min-width: 84px;
+  height: 18px;
+  padding: 0.5em 0.9em;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 142.6%;
+
+  @media only screen and (min-width: 1024px) {
+    min-width: 115px;
+    height: 25px;
+    border-radius: 10px;
+    font-size: 14px;
+  }
 }
