@@ -4,6 +4,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import logements from '../data/logements.json';
 import Slideshow from '../components/Slideshow/Slideshow';
+import Collapse from '../components/Collapse/Collapse';
 
 function HousingPage() {
   // Récupérer l'ID du logement depuis les paramètres d'URL
@@ -30,11 +31,22 @@ function HousingPage() {
   // Afficher les informations du logement
   return (
     <div>
+      <Slideshow images={logement.pictures} alt={logement.title} />
       <h1>{logement.title}</h1>
-      <img src={logement.cover} alt={logement.title} />
-      <Slideshow images={logement.pictures} />
+      <p>{logement.location}</p>
       <p>{logement.description}</p>
-      {/* Ajout d'autres détails nécessaires */}
+      <div>
+        <Collapse title="Description">
+          <p>{logement.description}</p>
+        </Collapse>
+        <Collapse title="Équipements">
+          <ul>
+            {logement.equipments.map((equipment, index) => (
+              <li key={index}>{equipment}</li>
+            ))}
+          </ul>
+        </Collapse>
+      </div>
     </div>
   );
 }
