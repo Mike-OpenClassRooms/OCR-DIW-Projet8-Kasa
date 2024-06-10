@@ -3,17 +3,30 @@
 .host {
   display: flex;
   align-items: center;
+  max-width: 33%;
+  gap: 10px;
+  @media only screen and (min-width: 1024px) {
+    max-width: 30%;
+  }
 }
 
 .host-name {
-  margin-right: 10px;
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 12px;
+  font-weight: 500;
+  color: #ff6060;
+  text-align: right;
+  @media only screen and (min-width: 1024px) {
+    font-size: 18px;
+  }
 }
 
 .host-picture {
-  width: 50px;
-  height: 50px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   object-fit: cover;
+  @media only screen and (min-width: 1024px) {
+    width: 64px;
+    height: 64px;
+  }
 }

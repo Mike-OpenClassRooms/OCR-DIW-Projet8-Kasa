@@ -12,6 +12,7 @@
 
   @media only screen and (min-width: 1024px) {
     padding: 10px 20px; // Augmentation du padding sur les écrans larges
+    border-radius: 10px;
   }
 }
 
@@ -50,6 +51,7 @@
   padding: 0 20px; // Espacement interne latéral
   font-size: 12px; // Taille de police par défaut
   font-weight: 400; // Épaisseur de police
+  line-height: 142.6%;
 
   @media only screen and (min-width: 1024px) {
     font-size: 18px; // Augmentation de la taille de la police sur les écrans larges
