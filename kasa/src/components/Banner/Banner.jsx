@@ -9,12 +9,13 @@ const Banner = ({ title, imageUrl, overlayOpacity = 0.6 }) => {
   return (
     // Div principale de la bannière avec une image de fond définie par la prop imageUrl
     <div className="banner" style={{ backgroundImage: `url(${imageUrl})` }}>
-      {/* Calque semi-transparent */}
+      {/* Calque semi-transparent pour créer un effet de superposition */}
       <div
         className="overlay"
+        // Le calque a une couleur de fond noire avec une opacité définie par la prop overlayOpacity
         style={{ backgroundColor: `rgba(0, 0, 0, ${overlayOpacity})` }}
       ></div>
-      {/* Texte de la bannière */}
+      {/* Affichage du titre de la bannière si la prop title est définie */}
       {title && <h1 className="banner-title">{title}</h1>}
     </div>
   );

@@ -1,9 +1,10 @@
+// src/components/Host/Collapse.jsx
 // Ce composant gère les menus déroulants dans la page À Propos et les pages des logements.
 
 import React, { useState } from 'react'; // Importation de React et du hook useState
 import './Collapse.scss'; // Importation du fichier de style SCSS pour le composant
 
-// Définition du composant Collapse qui accepte des props: title et children
+// Définition du composant Collapse qui accepte des props : title et children
 const Collapse = ({ title, children }) => {
   // Déclaration d'un état local isOpen, initialisé à false, et la fonction setIsOpen pour le mettre à jour
   const [isOpen, setIsOpen] = useState(false);

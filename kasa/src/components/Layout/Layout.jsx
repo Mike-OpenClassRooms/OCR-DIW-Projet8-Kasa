@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 // Importation du fichier SCSS pour styliser le composant Layout
 import './Layout.scss';
 
-// Importation du logo
+// Importation des logos
 import logo from '../../assets/images/logo-kasa.svg';
 import logoFooter from '../../assets/images/logo-kasa-white.svg';
 

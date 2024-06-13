@@ -1,6 +1,5 @@
-// Ce composant gère les logements affichés sur la page d’accueil.
-
 // src/components/HousingCard/HousingCard.jsx
+// Ce composant gère les logements affichés sur la page d’accueil.
 
 // On importe les styles spécifiques pour ce composant depuis le fichier 'HousingCard.scss'
 import './HousingCard.scss';
@@ -38,4 +37,5 @@ const HousingCard = () => {
   );
 };
 
+// On exporte le composant HousingCard pour pouvoir l'utiliser dans d'autres parties de l'application
 export default HousingCard;
