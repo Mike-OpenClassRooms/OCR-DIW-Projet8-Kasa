@@ -1,5 +1,8 @@
 // src/components/Tags/Tags.scss
 
+// Importation des variables globales
+@import '../../styles/main.scss';
+
 .tags {
   display: flex;
   flex-wrap: wrap;
