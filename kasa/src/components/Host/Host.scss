@@ -1,5 +1,8 @@
 // src/components/Host/Host.scss
 
+// Importation des variables globales
+@import '../../styles/main.scss';
+
 .host {
   display: flex;
   align-items: center;
