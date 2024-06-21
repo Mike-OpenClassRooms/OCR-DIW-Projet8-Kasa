@@ -5,7 +5,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 // Importation des styles principaux en SCSS
-import './styles/scss/main.scss';
+import './styles/main.scss';
 
 // Importation du composant principal de l'application
 import App from './App';
