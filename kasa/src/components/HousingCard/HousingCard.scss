@@ -1,5 +1,8 @@
 // src/components/HousingCard/HousingCard.scss
 
+// Importation des variables globales
+@import '../../styles/main.scss';
+
 .housing-display {
   // Affiche les éléments en grille avec une seule colonne par défaut, espace les éléments et centre leur alignement horizontal.
   display: grid;
