@@ -1,5 +1,8 @@
 // src/components/Rating/Rating.scss
 
+// Importation des variables globales
+@import '../../styles/main.scss';
+
 .rating {
   display: flex;
   gap: 5px;
