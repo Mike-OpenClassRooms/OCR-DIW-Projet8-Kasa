@@ -1,3 +1,8 @@
+// src/components/Collapse/Collapse.scss
+
+// Importation des variables globales
+@import '../../styles/main.scss';
+
 // Style pour l'en-tête du menu déroulant
 .opened-collapse {
   display: flex; // Utilisation du flexbox pour aligner les éléments enfants
