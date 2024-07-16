@@ -29,7 +29,15 @@ function HousingPage() {
     if (!logement) {
       navigate('/404');
     } else {
-      // Si le logement est trouvé, ajouter une balise canonique
+      // Vérifier s'il y a déjà une balise canonique existante et la supprimer
+      const existingCanonicalLink = document.querySelector(
+        'link[rel="canonical"]',
+      );
+      if (existingCanonicalLink) {
+        document.head.removeChild(existingCanonicalLink);
+      }
+
+      // Créer et ajouter une nouvelle balise canonique
       const canonicalLink = document.createElement('link');
       canonicalLink.rel = 'canonical';
       canonicalLink.href = `https://kasa.city/housing/${logement.id}`;
@@ -37,7 +45,9 @@ function HousingPage() {
 
       // Nettoyer la balise canonique lorsque le composant est démonté
       return () => {
-        document.head.removeChild(canonicalLink);
+        if (canonicalLink) {
+          document.head.removeChild(canonicalLink);
+        }
       };
     }
   }, [logement, navigate]); // Le tableau de dépendances contient logement et navigate pour exécuter l'effet lorsque l'un de ces éléments change

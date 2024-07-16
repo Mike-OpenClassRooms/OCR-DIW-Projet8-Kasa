@@ -3,70 +3,59 @@ const path = require('path');
 const xmlbuilder = require('xmlbuilder');
 const glob = require('glob');
 
-// Fonction pour récupérer les données de logement depuis le fichier JSON
-const getHousingData = () => {
-  const dataPath = path.join(__dirname, 'src', 'data', 'logements.json');
-  const data = fs.readFileSync(dataPath, 'utf-8');
-  return JSON.parse(data);
-};
+// Chemin absolu vers le fichier JSON des logements
+const logementsPath = path.resolve(__dirname, 'src', 'data', 'logements.json');
 
-const getRoutes = () => {
-  return new Promise((resolve, reject) => {
-    glob('src/pages/**/*.jsx', (err, files) => {
-      if (err) {
-        reject(err);
-      } else {
-        const routes = files
-          .map((file) => {
-            const route = file
-              .replace('src/pages/', '')
-              .replace('.jsx', '')
-              .toLowerCase();
-            if (route === 'index') return '/';
-            if (route === 'aboutpage') return '/about';
-            return null;
-          })
-          .filter((route) => route !== null);
-        resolve(routes);
-      }
-    });
-  });
-};
+// Charger les données de logements depuis le fichier JSON
+const logements = require(logementsPath);
 
-const generateSitemap = async () => {
-  const routes = await getRoutes();
-  const housingData = getHousingData();
-  const urls = [
-    ...routes.map((route) => ({
-      loc: route,
-      lastmod: '2024-07-16',
-      changefreq: 'yearly',
-      priority: route === '/' ? 1.0 : 0.8,
-    })),
-    ...housingData.map((housing) => ({
-      loc: `/housing/${housing.id}`,
-      lastmod: '2024-07-16',
-      changefreq: 'yearly',
-      priority: 0.7,
-    })),
-  ];
+const sitemap = xmlbuilder
+  .create('urlset', {
+    version: '1.0',
+    encoding: 'UTF-8',
+  })
+  .att('xmlns', 'http://www.sitemaps.org/schemas/sitemap/0.9');
 
-  const urlset = xmlbuilder
-    .create('urlset', { encoding: 'UTF-8' })
-    .att('xmlns', 'http://www.sitemaps.org/schemas/sitemap/0.9');
+// Ajouter l'URL de la page d'accueil
+sitemap
+  .ele('url')
+  .ele('loc', 'https://kasa.city/')
+  .up()
+  .ele('lastmod', new Date().toISOString().split('T')[0])
+  .up()
+  .ele('changefreq', 'yearly')
+  .up()
+  .ele('priority', '1.0')
+  .up();
 
-  urls.forEach((url) => {
-    const urlElement = urlset.ele('url');
-    urlElement.ele('loc', `https://kasa.city${url.loc}`);
-    urlElement.ele('lastmod', url.lastmod);
-    urlElement.ele('changefreq', url.changefreq);
-    urlElement.ele('priority', url.priority);
-  });
+// Ajouter l'URL de la page "À propos"
+sitemap
+  .ele('url')
+  .ele('loc', 'https://kasa.city/about')
+  .up()
+  .ele('lastmod', new Date().toISOString().split('T')[0])
+  .up()
+  .ele('changefreq', 'yearly')
+  .up()
+  .ele('priority', '0.8')
+  .up();
 
-  const xmlString = urlset.end({ pretty: true });
-  const filePath = path.join(__dirname, 'public', 'sitemap.xml');
-  fs.writeFileSync(filePath, xmlString, 'utf8');
-  console.log(`Sitemap has been generated at ${filePath}`);
-};
+// Ajouter les URLs des pages de logement
+logements.forEach((logement) => {
+  sitemap
+    .ele('url')
+    .ele('loc', `https://kasa.city/housing/${logement.id}`)
+    .up()
+    .ele('lastmod', new Date().toISOString().split('T')[0])
+    .up()
+    .ele('changefreq', 'yearly')
+    .up()
+    .ele('priority', '0.8')
+    .up();
+});
 
-generateSitemap().catch((err) => console.error(err));
+const xmlString = sitemap.end({ pretty: true });
+const outputPath = path.resolve(__dirname, 'public', 'sitemap.xml');
+
+fs.writeFileSync(outputPath, xmlString, 'utf8');
+console.log(`Sitemap has been generated at ${outputPath}`);
