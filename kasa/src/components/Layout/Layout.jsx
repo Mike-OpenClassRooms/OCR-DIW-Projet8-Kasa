@@ -58,7 +58,17 @@ function Layout({ children }) {
         <img src={logoFooter} alt="Kasa logo footer" className="logo-footer" />
         {/* Copyright du footer */}
         <p>© 2024 Kasa. Tous droits réservés.</p>
-        <p>Ce site est une démo</p>
+        <p>
+          Ceci est une démo par{' '}
+          <a
+            href="https://mikepixel.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {' '}
+            MikePixelDev
+          </a>
+        </p>
       </footer>
     </div>
   );
