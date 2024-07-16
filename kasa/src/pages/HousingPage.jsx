@@ -29,6 +29,9 @@ function HousingPage() {
     if (!logement) {
       navigate('/404');
     } else {
+      // Mettre à jour le titre de la page
+      document.title = `Kasa • ${logement.title}`;
+
       // Vérifier s'il y a déjà une balise canonique existante et la supprimer
       const existingCanonicalLink = document.querySelector(
         'link[rel="canonical"]',

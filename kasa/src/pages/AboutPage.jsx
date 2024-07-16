@@ -10,6 +10,9 @@ const aboutBannerImg = './images/banner-kasa-about.webp'; // Définition du chem
 // Définition du composant AboutPage
 const AboutPage = () => {
   useEffect(() => {
+    // Mettre à jour le titre de la page
+    document.title = 'Kasa • À propos';
+
     // Ajouter une balise canonique pour la page À propos
     const canonicalLink = document.createElement('link');
     canonicalLink.rel = 'canonical';
