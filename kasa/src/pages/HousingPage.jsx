@@ -28,6 +28,17 @@ function HousingPage() {
     // Si le logement n'est pas trouvé, rediriger vers la page 404
     if (!logement) {
       navigate('/404');
+    } else {
+      // Si le logement est trouvé, ajouter une balise canonique
+      const canonicalLink = document.createElement('link');
+      canonicalLink.rel = 'canonical';
+      canonicalLink.href = `https://kasa.city/housing/${logement.id}`;
+      document.head.appendChild(canonicalLink);
+
+      // Nettoyer la balise canonique lorsque le composant est démonté
+      return () => {
+        document.head.removeChild(canonicalLink);
+      };
     }
   }, [logement, navigate]); // Le tableau de dépendances contient logement et navigate pour exécuter l'effet lorsque l'un de ces éléments change
 

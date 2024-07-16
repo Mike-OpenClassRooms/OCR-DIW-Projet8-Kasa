@@ -24,7 +24,7 @@ const getRoutes = () => {
               .toLowerCase();
             if (route === 'index') return '/';
             if (route === 'aboutpage') return '/about';
-            return null; // Ignore other pages, will handle housing separately
+            return null;
           })
           .filter((route) => route !== null);
         resolve(routes);
@@ -40,14 +40,14 @@ const generateSitemap = async () => {
     ...routes.map((route) => ({
       loc: route,
       lastmod: '2024-07-16',
-      changefreq: route === '/' ? 'monthly' : 'yearly',
+      changefreq: 'yearly',
       priority: route === '/' ? 1.0 : 0.8,
     })),
     ...housingData.map((housing) => ({
       loc: `/housing/${housing.id}`,
       lastmod: '2024-07-16',
       changefreq: 'yearly',
-      priority: 0.8,
+      priority: 0.7,
     })),
   ];
 
