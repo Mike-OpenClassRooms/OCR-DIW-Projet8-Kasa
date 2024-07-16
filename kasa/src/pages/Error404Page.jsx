@@ -1,5 +1,3 @@
-// src/pages/Error404Page.jsx
-
 // Importation des hooks et composants nécessaires depuis 'react' et 'react-router-dom'
 import { useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
@@ -10,6 +8,17 @@ function Error404Page() {
 
   // Utilisation de useEffect pour exécuter un effet secondaire après le montage du composant
   useEffect(() => {
+    // Mettre à jour le titre de la page
+    document.title = "Dommage, la page n'existe pas !";
+
+    // Vérifier s'il y a déjà une balise canonique existante et la supprimer
+    const existingCanonicalLink = document.querySelector(
+      'link[rel="canonical"]',
+    );
+    if (existingCanonicalLink) {
+      document.head.removeChild(existingCanonicalLink);
+    }
+
     // Définir un timeout pour rediriger l'utilisateur vers la page d'accueil après 5 secondes
     const timer = setTimeout(() => {
       navigate('/'); // Redirige l'utilisateur vers la page d'accueil
