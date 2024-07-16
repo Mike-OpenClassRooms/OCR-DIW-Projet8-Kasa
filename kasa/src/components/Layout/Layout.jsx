@@ -59,14 +59,13 @@ function Layout({ children }) {
         {/* Copyright du footer */}
         <p>© 2024 Kasa. Tous droits réservés.</p>
         <p>
-          Ceci est une démo par{' '}
+          ⚠️ Ce site est une démo d'un projet OpenClassRooms par{' '}
           <a
             href="https://mikepixel.dev"
             target="_blank"
             rel="noopener noreferrer"
           >
-            {' '}
-            MikePixelDev
+            <strong>MikePixelDev</strong>
           </a>
         </p>
       </footer>
